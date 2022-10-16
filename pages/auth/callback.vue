@@ -1,7 +1,7 @@
 <template>
   <div>
     <ClientOnly>
-      <Auth0Callback />
+      <AuthCallback />
     </ClientOnly>
   </div>
 </template>

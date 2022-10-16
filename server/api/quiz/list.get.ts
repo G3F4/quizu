@@ -9,7 +9,6 @@ export interface QuizListResponse {
 }
 
 export default defineEventHandler<QuizListResponse>((event) => {
-  console.log(['event.context.auth'], event.context.auth);
   const page = 0;
   const pageSize = 10;
   const items = Array.from({ length: 123 }).map((_, index) => dummyQuiz(`${index}`));

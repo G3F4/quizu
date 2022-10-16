@@ -4,7 +4,6 @@ import jwksClient from 'jwks-rsa';
 import authConfig from '~/authConfig';
 
 export default defineEventHandler(async (event) => {
-  console.log(['event.req.url'], event.req.url);
   if (isApiEndpoint(event.req.url)) {
     const authorization = event.req.headers.authorization || '';
     const token = authorization.split(' ')[1];

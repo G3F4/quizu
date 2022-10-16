@@ -7,6 +7,22 @@ await load();
 
 <template>
   <div>
-    {{ list }}
+    <ul :class="$style.list">
+      <li v-for="i in list" :key="i.id">
+        <NuxtLink :href="`/quiz/${i.id}`" :class="$style.quizLink">
+          {{ i.name }}
+        </NuxtLink>
+      </li>
+    </ul>
   </div>
 </template>
+
+<style module>
+.list {
+  list-style: none;
+}
+
+.quizLink {
+  color: darkslategrey;
+}
+</style>

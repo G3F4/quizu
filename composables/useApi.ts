@@ -5,8 +5,9 @@ type UseApiRequest<Response> = Parameters<typeof useFetch<Response>>[0];
 export default function useApi<Response>(req: UseApiRequest<Response>) {
   const accessToken = useToken().getAccessToken();
   const { data, pending, error } = useFetch<Response>(req, { headers: {
-      authorization: `Bearer ${accessToken}`
-    }
+      authorization: `Bearer ${accessToken}`,
+    },
+    key: `${req}`
   });
 
   return new Promise<Response>((resolve, reject) => {
