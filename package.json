@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0-rc.11"
+  },
+  "dependencies": {
+    "@auth0/auth0-spa-js": "^1.22.4",
+    "@auth0/auth0-vue": "^1.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^2.1.4"
+  }
+}
